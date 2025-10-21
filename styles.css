@@ -1,0 +1,867 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  background: #0a0e1a;
+  color: #e0e8ff;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Updated background to darker navy/black with subtle texture */
+.cyber-grid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #050810;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cyber-stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(1px 1px at 20% 30%, rgba(100, 180, 255, 0.3), transparent),
+    radial-gradient(1px 1px at 60% 70%, rgba(150, 200, 255, 0.2), transparent),
+    radial-gradient(1px 1px at 50% 50%, rgba(200, 220, 255, 0.2), transparent),
+    radial-gradient(1px 1px at 80% 10%, rgba(180, 210, 255, 0.3), transparent),
+    radial-gradient(1px 1px at 90% 60%, rgba(120, 190, 255, 0.2), transparent),
+    radial-gradient(1px 1px at 15% 80%, rgba(160, 200, 255, 0.2), transparent);
+  background-size: 300% 300%;
+  animation: starsMove 60s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes starsMove {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+/* Redesigned header with flat dark background and neon blue border */
+.cyber-header {
+  position: sticky;
+  top: 0;
+  background: #0a0e1a;
+  border-bottom: 2px solid #4dd0ff;
+  box-shadow: 0 0 20px rgba(77, 208, 255, 0.3);
+  z-index: 1000;
+  padding: 1rem 2rem;
+}
+
+.header-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Updated logo with blue/silver gradient text */
+.logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  font-size: 1.6rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #4dd0ff 0%, #a8d8ff 50%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 20px rgba(77, 208, 255, 0.5);
+  letter-spacing: 2px;
+  font-family: "Courier New", monospace;
+}
+
+.logo-accent {
+  background: linear-gradient(90deg, #ff4dd0 0%, #ff8dd0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Flat navigation with border highlights */
+.nav-menu {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav-link {
+  color: #4dd0ff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 0.6rem 1.2rem;
+  background: transparent;
+  border: 1px solid #2a4060;
+  border-radius: 4px;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.nav-link:hover {
+  border-color: #4dd0ff;
+  box-shadow: 0 0 10px rgba(77, 208, 255, 0.3);
+  background: rgba(77, 208, 255, 0.05);
+}
+
+.nav-link.active {
+  border-color: #4dd0ff;
+  box-shadow: 0 0 15px rgba(77, 208, 255, 0.5);
+  background: rgba(77, 208, 255, 0.1);
+  color: #4dd0ff;
+}
+
+/* Updated user info with clean design */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.online-status {
+  color: #4dff88;
+  font-size: 0.85rem;
+  text-shadow: 0 0 8px #4dff88;
+  animation: pulse 2s infinite;
+  font-weight: 600;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.username {
+  color: #4dd0ff;
+  font-weight: 600;
+  text-shadow: 0 0 6px rgba(77, 208, 255, 0.5);
+}
+
+/* Main Container */
+.main-container {
+  max-width: 1400px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 300px 1fr 280px;
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Redesigned cards with neon borders and dark backgrounds */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.profile-card {
+  background: rgba(10, 14, 26, 0.8);
+  border: 2px solid #4dd0ff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 0 20px rgba(77, 208, 255, 0.2);
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Updated avatar with neon glow */
+.profile-avatar {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 1rem;
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 3px solid #4dd0ff;
+  box-shadow: 0 0 20px rgba(77, 208, 255, 0.6);
+}
+
+.avatar-glow {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(77, 208, 255, 0.4), transparent);
+  animation: rotate 4s linear infinite;
+  z-index: -1;
+  filter: blur(10px);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Updated text colors to blue/silver scheme */
+.profile-name {
+  color: #4dd0ff;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 10px rgba(77, 208, 255, 0.8);
+  font-weight: 600;
+}
+
+.profile-status {
+  color: #a8d8ff;
+  font-size: 0.9rem;
+}
+
+/* Flat stats display with neon accents */
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(5, 8, 16, 0.6);
+  border-radius: 8px;
+  border: 1px solid #2a4060;
+}
+
+.stat {
+  text-align: center;
+  position: relative;
+}
+
+.stat::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #4dd0ff, transparent);
+  box-shadow: 0 0 8px #4dd0ff;
+}
+
+.stat-value {
+  display: block;
+  color: #4dff88;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  text-shadow: 0 0 10px rgba(77, 255, 136, 0.8);
+  font-family: "Courier New", monospace;
+}
+
+.stat-label {
+  display: block;
+  color: #8aa8d0;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(5, 8, 16, 0.4);
+  border-radius: 8px;
+  border: 1px solid #2a4060;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-label {
+  color: #8aa8d0;
+  font-size: 0.85rem;
+}
+
+.info-value {
+  color: #a8d8ff;
+  font-weight: 600;
+}
+
+/* Updated button with neon blue/silver gradient */
+.edit-profile-btn {
+  width: 100%;
+  padding: 0.8rem;
+  background: linear-gradient(90deg, #4dd0ff 0%, #a8d8ff 100%);
+  border: none;
+  border-radius: 6px;
+  color: #0a0e1a;
+  font-weight: bold;
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 0 20px rgba(77, 208, 255, 0.4);
+  transition: all 0.3s;
+  font-family: "Courier New", monospace;
+}
+
+.edit-profile-btn:hover {
+  box-shadow: 0 0 30px rgba(77, 208, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+.edit-profile-btn:active {
+  transform: translateY(0);
+}
+
+/* Top Friends */
+.top-friends {
+  background: rgba(10, 14, 26, 0.8);
+  border: 2px solid #4dd0ff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 0 20px rgba(77, 208, 255, 0.2);
+}
+
+.section-title {
+  color: #4dd0ff;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(77, 208, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.friends-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.friend-item {
+  text-align: center;
+  padding: 0.8rem;
+  background: rgba(5, 8, 16, 0.4);
+  border-radius: 8px;
+  border: 1px solid #2a4060;
+  transition: all 0.3s;
+}
+
+.friend-item:hover {
+  border-color: #4dd0ff;
+  box-shadow: 0 0 15px rgba(77, 208, 255, 0.3);
+  background: rgba(77, 208, 255, 0.05);
+}
+
+.friend-item img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #4dd0ff;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 0 10px rgba(77, 208, 255, 0.4);
+  transition: all 0.3s;
+}
+
+.friend-item img:hover {
+  box-shadow: 0 0 20px rgba(77, 208, 255, 0.8);
+  transform: scale(1.05);
+}
+
+.friend-item span {
+  display: block;
+  color: #a8d8ff;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Feed */
+.feed {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Updated create post with neon border */
+.create-post {
+  background: rgba(10, 14, 26, 0.8);
+  border: 2px solid #4dd0ff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 0 20px rgba(77, 208, 255, 0.2);
+}
+
+.create-post-header {
+  color: #4dd0ff;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  text-shadow: 0 0 8px rgba(77, 208, 255, 0.6);
+}
+
+.blink-text {
+  animation: blink 1s infinite;
+  color: #4dff88;
+  text-shadow: 0 0 10px #4dff88;
+}
+
+@keyframes blink {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0.3;
+  }
+}
+
+/* Dark input with neon focus */
+.post-input {
+  width: 100%;
+  min-height: 100px;
+  background: rgba(5, 8, 16, 0.8);
+  border: 1px solid #2a4060;
+  border-radius: 8px;
+  padding: 1rem;
+  color: #a8d8ff;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.95rem;
+  resize: vertical;
+  margin-bottom: 1rem;
+}
+
+.post-input:focus {
+  outline: none;
+  border-color: #4dd0ff;
+  box-shadow: 0 0 15px rgba(77, 208, 255, 0.3);
+}
+
+.post-input::placeholder {
+  color: #5a7ba8;
+}
+
+.create-post-actions {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+/* Flat action buttons with borders */
+.action-btn {
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 1px solid #2a4060;
+  border-radius: 6px;
+  color: #a8d8ff;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+
+.action-btn:hover {
+  border-color: #4dd0ff;
+  box-shadow: 0 0 10px rgba(77, 208, 255, 0.3);
+  background: rgba(77, 208, 255, 0.05);
+}
+
+/* Bright neon green POST button */
+.post-btn {
+  margin-left: auto;
+  padding: 0.6rem 2rem;
+  background: #4dff88;
+  border: none;
+  border-radius: 6px;
+  color: #0a0e1a;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 0 20px rgba(77, 255, 136, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.post-btn:hover {
+  box-shadow: 0 0 30px rgba(77, 255, 136, 0.6);
+  transform: translateY(-2px);
+}
+
+.post-btn:active {
+  transform: translateY(0);
+}
+
+/* Post */
+.post {
+  background: rgba(10, 14, 26, 0.8);
+  border: 2px solid #4dd0ff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 0 20px rgba(77, 208, 255, 0.2);
+}
+
+.post-header {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.post-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #4dd0ff;
+  box-shadow: 0 0 10px rgba(77, 208, 255, 0.4);
+}
+
+.post-user-info {
+  flex: 1;
+}
+
+.post-username {
+  color: #4dd0ff;
+  font-size: 1.05rem;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  text-shadow: 0 0 8px rgba(77, 208, 255, 0.6);
+}
+
+.post-time {
+  color: #8aa8d0;
+  font-size: 0.8rem;
+}
+
+.post-content {
+  margin-bottom: 1rem;
+}
+
+.post-content p {
+  color: #e0e8ff;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Updated image frame with neon border */
+.post-image {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid #2a4060;
+  box-shadow: 0 0 15px rgba(77, 208, 255, 0.2);
+}
+
+.post-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.post-actions {
+  display: flex;
+  gap: 0.8rem;
+  padding-top: 1rem;
+  border-top: 1px solid #2a4060;
+}
+
+.action-btn-post {
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 1px solid #2a4060;
+  border-radius: 6px;
+  color: #a8d8ff;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+
+.action-btn-post:hover {
+  border-color: #4dd0ff;
+  box-shadow: 0 0 10px rgba(77, 208, 255, 0.3);
+  background: rgba(77, 208, 255, 0.05);
+}
+
+.post-comments {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #2a4060;
+}
+
+.comment {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.comment img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #4dd0ff;
+  box-shadow: 0 0 8px rgba(77, 208, 255, 0.4);
+}
+
+.comment-content {
+  flex: 1;
+  background: rgba(5, 8, 16, 0.6);
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #2a4060;
+}
+
+.comment-user {
+  color: #4dd0ff;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.3rem;
+  text-shadow: 0 0 6px rgba(77, 208, 255, 0.5);
+}
+
+.comment-content p {
+  color: #a8d8ff;
+  font-size: 0.9rem;
+}
+
+/* Right Sidebar */
+.right-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.widget {
+  background: rgba(10, 14, 26, 0.8);
+  border: 2px solid #4dd0ff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 0 20px rgba(77, 208, 255, 0.2);
+}
+
+.widget-title {
+  color: #4dd0ff;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(77, 208, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.online-friends {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.online-friend {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  padding: 0.6rem;
+  border-radius: 8px;
+  background: rgba(5, 8, 16, 0.4);
+  border: 1px solid #2a4060;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.online-friend:hover {
+  border-color: #4dd0ff;
+  box-shadow: 0 0 10px rgba(77, 208, 255, 0.3);
+  background: rgba(77, 208, 255, 0.05);
+}
+
+.online-friend img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #4dff88;
+  box-shadow: 0 0 8px rgba(77, 255, 136, 0.4);
+}
+
+.friend-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.friend-name {
+  color: #a8d8ff;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.friend-status {
+  color: #4dff88;
+  font-size: 0.75rem;
+  text-shadow: 0 0 6px rgba(77, 255, 136, 0.6);
+}
+
+.trending-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+/* Updated trending items with left border accent */
+.trending-item {
+  color: #a8d8ff;
+  padding: 0.6rem 0.8rem;
+  background: rgba(5, 8, 16, 0.4);
+  border-left: 3px solid #4dd0ff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+
+.trending-item:hover {
+  background: rgba(77, 208, 255, 0.1);
+  box-shadow: 0 0 15px rgba(77, 208, 255, 0.3);
+  border-left-width: 4px;
+}
+
+/* Updated ad widget with silver/white accents */
+.ad-widget {
+  border-color: #a8d8ff;
+  background: rgba(10, 14, 26, 0.9);
+}
+
+.retro-ad {
+  text-align: center;
+}
+
+.ad-blink {
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  animation: blink 1s infinite;
+  text-shadow: 0 0 10px #ffffff;
+  font-size: 1.1rem;
+}
+
+.retro-ad p {
+  color: #a8d8ff;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.ad-subtext {
+  color: #8aa8d0;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.ad-btn {
+  padding: 0.8rem 2rem;
+  background: linear-gradient(90deg, #a8d8ff 0%, #ffffff 100%);
+  border: none;
+  border-radius: 6px;
+  color: #0a0e1a;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(168, 216, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+}
+
+.ad-btn:hover {
+  box-shadow: 0 0 30px rgba(168, 216, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+.ad-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .main-container {
+    grid-template-columns: 250px 1fr 250px;
+  }
+}
+
+@media (max-width: 968px) {
+  .main-container {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar,
+  .right-sidebar {
+    display: none;
+  }
+
+  .nav-menu {
+    gap: 0.5rem;
+  }
+
+  .nav-link {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .cyber-header {
+    padding: 0.8rem 1rem;
+  }
+
+  .header-content {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .logo-text {
+    font-size: 1.3rem;
+  }
+
+  .nav-menu {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .user-info {
+    font-size: 0.85rem;
+  }
+}
