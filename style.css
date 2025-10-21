@@ -1,0 +1,372 @@
+body
+{
+    background-color: #191716;
+    color: white; 
+    justify-content: center;
+    overflow-x: hidden;
+
+}
+
+
+p {
+  font-family: monospace;
+  font-size: 16px;
+  text-align: center;
+}
+
+
+/* logo */
+
+.logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 10px;
+  opacity: 0.2; /* 20% opacity */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -10;
+}
+
+.logo img {
+  width: auto;
+  height: auto;
+  max-width: 130%;
+  max-height: 130%;
+  opacity: 1; /* Make sure the image itself is fully opaque */
+}
+
+
+
+/* sara, NYC, email */
+.nav {
+  font-family: monospace;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  padding: 15px;
+  z-index: 3;
+}
+
+.nav a {
+  content: '\2022';
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+  margin: 0 10px;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.top-links:hover a {
+  filter: drop-shadow(0 0 10px white);
+}
+
+
+#location-link,
+.bullet {
+  display: inline;
+}
+
+
+
+/* about, resume */
+
+.bottom-nav {
+  font-family: monospace;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 15px;
+}
+
+.bottom-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.bottom-nav a:hover {
+  filter: drop-shadow(0 0 10px white);
+}
+
+
+
+
+
+/* copyright */
+
+.copyright {
+  font-family: monospace;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 15px;
+}
+
+.copyright a {
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+
+
+
+/* works */
+
+.title{
+  font-family: monospace;
+  text-align: center;
+  margin-top: 5%;
+  font-size: 2vw;
+}
+
+.works {
+  width: 70%;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 2%;
+}
+
+
+
+.heading{
+  margin: 1%;
+}
+.heading p {
+  font-family: monospace;
+  font-style: italic;
+}
+
+
+
+.caption {
+  width: 70%; 
+  margin: 0 auto; 
+}
+
+.caption p {
+  font-family: monospace;
+  width: 100%; 
+  font-size: 14px;
+}
+
+
+img{
+  width: 40%;
+}
+
+
+
+
+
+
+
+/* general art */
+
+.pttr {
+  max-width: 100%;
+}
+
+.pttr img {
+  width: 100%;
+  margin-top: 5%;
+  margin-left: -65%;
+}
+
+.fmn {
+  max-width: 100%;
+}
+
+.fmn img {
+  width: 90%;
+  margin-left: 50%;
+  margin-top: -60%;
+}
+
+.wildcard {
+  max-width: 100%;
+}
+
+.wildcard img {
+  padding: 5%;
+  margin-top: -5%;
+  margin-left: -5%;
+  width: 80%;
+}
+
+.zineify {
+  max-width: 100%;
+}
+
+.zineify img {
+  margin-top: -5%;
+  margin-left: -70%;
+  width: 50%;
+}
+
+.second-skin {
+  max-width: 100%;
+}
+
+.second-skin img {
+  margin-top: -105%;
+  margin-left: 50%;
+  width: 70%;
+}
+
+.polaris {
+  max-width: 100%;
+  transform: rotate(5deg);
+}
+
+.polaris img {
+  width: 75%;
+  margin-left: -60%;
+  margin-top: -5%;
+}
+
+.homebody {
+  max-width: 100%;
+  transform: rotate(-10deg);
+}
+
+.homebody img {
+  width: 95%;
+  margin-top: -100%;
+  margin-left: 65%;
+  padding: 2%;
+}
+
+
+.photos {
+  max-width: 100%;
+}
+
+.photos img {
+  width: 75%;
+  margin-top: 5%;
+  margin-left: -65%;
+}
+
+
+
+.riot-grrrl {
+  max-width: 100%;
+  transform: rotate(-5deg);
+}
+
+.riot-grrrl img {
+  margin-top: -20%;
+  margin-left: 75%;
+  width: 50%;
+}
+
+.bluenar {
+  max-width: 100%;
+  transform: rotate(20deg);
+}
+
+.bluenar img {
+  width: 95%;
+  margin-top: -35%;
+  margin-left: -75%;
+}
+
+.heartrot {
+  max-width: 100%;
+  transform: rotate(15deg);
+}
+
+.heartrot img {
+  width: 95%;
+  margin-top: -40%;
+  margin-left: 40%;
+}
+
+
+
+
+
+
+.pttr img,
+.polaris img,
+.homebody img,
+.riot-grrrl img,
+.wildcard img,
+.heartrot img,
+.fmn img,
+.zineify img,
+.photos img,
+.fine-arts img,
+.lesmiss img,
+.bluenar img,
+.second-skin img{
+  transition: filter 0.3s ease-in-out;
+}
+
+
+
+.pttr img:hover,
+.polaris img:hover,
+.homebody img:hover,
+.riot-grrrl img:hover,
+.wildcard img:hover,
+.heartrot img:hover,
+.fmn img:hover,
+.zineify img:hover,
+.photos img:hover,
+.fine-arts img:hover,
+.lesmiss img:hover, 
+.bluenar img:hover,
+.second-skin img:hover {
+  filter: drop-shadow(0 0 10px white);
+}
+
+
+
+
+
+
+
+/* phone media queries */
+
+
+@media only screen and (max-width: 567px) {
+  .works {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 10px; /* Adds spacing between items */
+    width: 100%;
+    margin: 0 auto; /* Center align the grid */
+  }
+
+  .works img {
+    width: 100%; /* Ensure images take full width of the column */
+    margin: 0 auto; /* Center align images */
+  }
+
+  .nav a, 
+  .bottom-nav a, 
+  .copyright a {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  #location-link,
+  #first-bullet{
+    display: none;
+  }
+
+}
+
+
+
