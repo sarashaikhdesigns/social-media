@@ -51,12 +51,11 @@ body {
   }
 }
 
-/* Redesigned header with flat dark background and neon blue border */
 .cyber-header {
   position: sticky;
   top: 0;
   background: #0a0e1a;
-  border-bottom: 2px solid #4dd0ff;
+  border-bottom: 2px solid #4dff88;
   box-shadow: 0 0 20px rgba(77, 208, 255, 0.3);
   z-index: 1000;
   padding: 1rem 2rem;
@@ -71,7 +70,6 @@ body {
   gap: 2rem;
 }
 
-/* Updated logo with blue/silver gradient text */
 .logo {
   position: relative;
   display: flex;
@@ -81,7 +79,7 @@ body {
 .logo-text {
   font-size: 1.6rem;
   font-weight: bold;
-  background: linear-gradient(90deg, #4dd0ff 0%, #a8d8ff 50%, #ffffff 100%);
+  background: linear-gradient(90deg, #4dff88 0%, #ffffff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -101,15 +99,16 @@ body {
 .nav-menu {
   display: flex;
   gap: 0.5rem;
+  margin-right: 5rem;
 }
 
 .nav-link {
-  color: #4dd0ff;
+  color: #4dff88;
   text-decoration: none;
   font-size: 0.9rem;
   padding: 0.6rem 1.2rem;
   background: transparent;
-  border: 1px solid #2a4060;
+  border: 1px solid #4dff88;
   /* border-radius: 4px; */
   transition: all 0.3s;
   text-transform: uppercase;
@@ -118,16 +117,16 @@ body {
 }
 
 .nav-link:hover {
-  border-color: #4dd0ff;
+  border-color: #4dff88;
   box-shadow: 0 0 10px rgba(77, 208, 255, 0.3);
   background: rgba(77, 208, 255, 0.05);
 }
 
 .nav-link.active {
-  border-color: #4dd0ff;
+  border-color: #4dff88;
   box-shadow: 0 0 15px rgba(77, 208, 255, 0.5);
   background: rgba(77, 208, 255, 0.1);
-  color: #4dd0ff;
+  color: #4dff88;
 }
 
 /* Updated user info with clean design */
@@ -156,7 +155,7 @@ body {
 }
 
 .username {
-  color: #4dd0ff;
+  color: #4dff88;
   font-weight: 600;
   text-shadow: 0 0 6px rgba(77, 208, 255, 0.5);
 }
@@ -182,7 +181,7 @@ body {
 
 .profile-card {
   background: rgba(10, 14, 26, 0.8);
-  border: 2px solid #4dd0ff;
+  border: 2px solid #4dff88;
   /* border-radius: 12px; */
   padding: 1.5rem;
   box-shadow: 0 0 20px rgba(77, 208, 255, 0.2);
@@ -205,7 +204,7 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  border: 3px solid #4dd0ff;
+  border: 3px solid #4dff88;
   box-shadow: 0 0 20px rgba(77, 208, 255, 0.6);
 }
 
@@ -233,7 +232,7 @@ body {
 
 /* Updated text colors to blue/silver scheme */
 .profile-name {
-  color: #4dd0ff;
+  color: #4dff88;
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
   text-shadow: 0 0 10px rgba(77, 208, 255, 0.8);
@@ -241,7 +240,7 @@ body {
 }
 
 .profile-status {
-  color: #a8d8ff;
+  color: #4dff88;
   font-size: 0.9rem;
 }
 
@@ -254,7 +253,7 @@ body {
   padding: 1rem;
   background: rgba(5, 8, 16, 0.6);
   /* border-radius: 8px; */
-  border: 1px solid #2a4060;
+  border: 1px solid #4dff88;
 }
 
 .stat {
@@ -262,17 +261,6 @@ body {
   position: relative;
 }
 
-.stat::after {
-  content: "";
-  position: absolute;
-  bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #4dd0ff, transparent);
-  box-shadow: 0 0 8px #4dd0ff;
-}
 
 .stat-value {
   display: block;
@@ -286,7 +274,7 @@ body {
 
 .stat-label {
   display: block;
-  color: #8aa8d0;
+  color: #4dff88;
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -300,7 +288,7 @@ body {
   padding: 1rem;
   background: rgba(5, 8, 16, 0.4);
   /* border-radius: 8px; */
-  border: 1px solid #2a4060;
+  border: 1px solid #4dff88;
 }
 
 .info-item {
@@ -309,12 +297,12 @@ body {
 }
 
 .info-label {
-  color: #8aa8d0;
+  color: #4dff88;
   font-size: 0.85rem;
 }
 
 .info-value {
-  color: #a8d8ff;
+  color: #4dff88;
   font-weight: 600;
 }
 
@@ -348,14 +336,14 @@ body {
 /* Top Friends */
 .top-friends {
   background: rgba(10, 14, 26, 0.8);
-  border: 2px solid #4dd0ff;
+  border: 2px solid #4dff88;
   /* border-radius: 12px; */
   padding: 1.5rem;
   box-shadow: 0 0 20px rgba(77, 208, 255, 0.2);
 }
 
 .section-title {
-  color: #4dd0ff;
+  color: #4dff88;
   font-size: 1rem;
   margin-bottom: 1rem;
   text-shadow: 0 0 10px rgba(77, 208, 255, 0.8);
@@ -380,7 +368,7 @@ body {
 }
 
 .friend-item:hover {
-  border-color: #4dd0ff;
+  border-color: #4dff88;
   box-shadow: 0 0 15px rgba(77, 208, 255, 0.3);
   background: rgba(77, 208, 255, 0.05);
 }
@@ -389,7 +377,7 @@ body {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  border: 2px solid #4dd0ff;
+  border: 2px solid #4dff88;
   margin-bottom: 0.5rem;
   box-shadow: 0 0 10px rgba(77, 208, 255, 0.4);
   transition: all 0.3s;
@@ -402,7 +390,7 @@ body {
 
 .friend-item span {
   display: block;
-  color: #a8d8ff;
+  color: #4dff88;
   font-size: 0.8rem;
   font-weight: 600;
 }
@@ -417,14 +405,14 @@ body {
 /* Updated create post with neon border */
 .create-post {
   background: rgba(10, 14, 26, 0.8);
-  border: 2px solid #4dd0ff;
+  border: 2px solid #4dff88;
   /* border-radius: 12px; */
   padding: 1.5rem;
   box-shadow: 0 0 20px rgba(77, 208, 255, 0.2);
 }
 
 .create-post-header {
-  color: #4dd0ff;
+  color: #4dff88;
   font-size: 1rem;
   margin-bottom: 1rem;
   display: flex;
@@ -457,7 +445,7 @@ body {
   width: 100%;
   min-height: 100px;
   background: rgba(5, 8, 16, 0.8);
-  border: 1px solid #2a4060;
+  border: 1px solid #4dff88;
   /* border-radius: 8px; */
   padding: 1rem;
   color: #4dff88;
@@ -469,12 +457,12 @@ body {
 
 .post-input:focus {
   outline: none;
-  border-color: #4dd0ff;
+  border-color: #4dff88;
   box-shadow: 0 0 15px rgba(77, 208, 255, 0.3);
 }
 
 .post-input::placeholder {
-  color: #5a7ba8;
+  color: #4dff88;
 }
 
 .create-post-actions {
@@ -487,9 +475,9 @@ body {
 .action-btn {
   padding: 0.5rem 1rem;
   background: transparent;
-  border: 1px solid #2a4060;
+  border: 1px solid #4dff88;
   /* border-radius: 6px; */
-  color: #a8d8ff;
+  color: #4dff88;
   font-family: monospace;
   font-size: 0.85rem;
   cursor: pointer;
@@ -498,7 +486,7 @@ body {
 }
 
 .action-btn:hover {
-  border-color: #4dd0ff;
+  border-color: #4dff88;
   box-shadow: 0 0 10px rgba(77, 208, 255, 0.3);
   background: rgba(77, 208, 255, 0.05);
 }
@@ -533,7 +521,7 @@ body {
 /* Post */
 .post {
   background: rgba(10, 14, 26, 0.8);
-  border: 2px solid #4dd0ff;
+  border: 2px solid #4dff88;
   /* border-radius: 12px; */
   padding: 1.5rem;
   box-shadow: 0 0 20px rgba(77, 208, 255, 0.2);
@@ -549,7 +537,7 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 2px solid #4dd0ff;
+  border: 2px solid #4dff88;
   box-shadow: 0 0 10px rgba(77, 208, 255, 0.4);
 }
 
@@ -558,7 +546,7 @@ body {
 }
 
 .post-username {
-  color: #4dd0ff;
+  color: #4dff88;
   font-size: 1.05rem;
   margin-bottom: 0.3rem;
   font-weight: 600;
@@ -566,7 +554,7 @@ body {
 }
 
 .post-time {
-  color: #8aa8d0;
+  color: #4dff88;
   font-size: 0.8rem;
 }
 
@@ -575,7 +563,7 @@ body {
 }
 
 .post-content p {
-  color: #e0e8ff;
+  color: #4dff88;
   line-height: 1.6;
   margin-bottom: 1rem;
 }
@@ -584,7 +572,7 @@ body {
 .post-image {
   /* border-radius: 8px; */
   overflow: hidden;
-  border: 2px solid #2a4060;
+  border: 2px solid #4dff88;
   box-shadow: 0 0 15px rgba(77, 208, 255, 0.2);
 }
 
@@ -606,7 +594,7 @@ body {
   background: transparent;
   border: 1px solid #2a4060;
   /* border-radius: 6px; */
-  color: #a8d8ff;
+  color: #4dff88;
   font-family: monospace;
   font-size: 0.85rem;
   cursor: pointer;
@@ -615,7 +603,7 @@ body {
 }
 
 .action-btn-post:hover {
-  border-color: #4dd0ff;
+  border-color: #4dff88;
   box-shadow: 0 0 10px rgba(77, 208, 255, 0.3);
   background: rgba(77, 208, 255, 0.05);
 }
@@ -636,7 +624,7 @@ body {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border: 2px solid #4dd0ff;
+  border: 2px solid #4dff88;
   box-shadow: 0 0 8px rgba(77, 208, 255, 0.4);
 }
 
@@ -649,7 +637,7 @@ body {
 }
 
 .comment-user {
-  color: #4dd0ff;
+  color: #4dff88;
   font-weight: 600;
   display: block;
   margin-bottom: 0.3rem;
@@ -657,7 +645,7 @@ body {
 }
 
 .comment-content p {
-  color: #a8d8ff;
+  color: #4dff88;
   font-size: 0.9rem;
 }
 
@@ -670,14 +658,14 @@ body {
 
 .widget {
   background: rgba(10, 14, 26, 0.8);
-  border: 2px solid #4dd0ff;
+  border: 2px solid #4dff88;
   /* border-radius: 12px; */
   padding: 1.5rem;
   box-shadow: 0 0 20px rgba(77, 208, 255, 0.2);
 }
 
 .widget-title {
-  color: #4dd0ff;
+  color: #4dff88;
   font-size: 0.95rem;
   margin-bottom: 1rem;
   text-shadow: 0 0 10px rgba(77, 208, 255, 0.8);
@@ -705,7 +693,7 @@ body {
 }
 
 .online-friend:hover {
-  border-color: #4dd0ff;
+  border-color: #4dff88;
   box-shadow: 0 0 10px rgba(77, 208, 255, 0.3);
   background: rgba(77, 208, 255, 0.05);
 }
@@ -724,7 +712,7 @@ body {
 }
 
 .friend-name {
-  color: #a8d8ff;
+  color: #4dff88;
   font-size: 0.9rem;
   font-weight: 600;
 }
@@ -743,10 +731,10 @@ body {
 
 /* Updated trending items with left border accent */
 .trending-item {
-  color: #a8d8ff;
+  color: #4dff88;
   padding: 0.6rem 0.8rem;
   background: rgba(5, 8, 16, 0.4);
-  border-left: 3px solid #4dd0ff;
+  border-left: 3px solid #4dff88;
   /* border-radius: 4px; */
   cursor: pointer;
   transition: all 0.3s;
@@ -761,7 +749,7 @@ body {
 
 /* Updated ad widget with silver/white accents */
 .ad-widget {
-  border-color: #a8d8ff;
+  border-color: #4dff88;
   background: rgba(10, 14, 26, 0.9);
 }
 
@@ -770,7 +758,7 @@ body {
 }
 
 .ad-blink {
-  color: #ffffff;
+  color: #4dff88;
   font-weight: bold;
   margin-bottom: 1rem;
   animation: blink 1s infinite;
@@ -779,14 +767,14 @@ body {
 }
 
 .retro-ad p {
-  color: #a8d8ff;
+  color: #4dff88;
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
 
 .ad-subtext {
-  color: #8aa8d0;
+  color: #4dff88;
   font-size: 0.9rem;
   margin-bottom: 1rem;
 }

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSpace</title>
+    <link rel="stylesheet" href="styles copy.css">
+</head>
+<body>
+    <!-- Animated background grid -->
+    <div class="cyber-grid"></div>
+    <div class="cyber-stars"></div>
+
+    <!-- Header -->
+    <header class="cyber-header">
+        <div class="header-content">
+            <div class="logo">
+                <span class="logo-text">CYBER<span class="logo-accent">SPACE</span></span>
+                <div class="logo-glow"></div>
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-link active">Feed</a>
+                <a href="#" class="nav-link">Friends</a>
+                <a href="#" class="nav-link">Messages</a>
+                <a href="#" class="nav-link">Profile</a>
+            </nav>
+            <div class="user-info">
+                <span class="online-status">● ONLINE</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar Profile -->
+        <aside class="sidebar">
+            <div class="profile-card">
+                <div class="profile-header">
+                    <div class="profile-avatar">
+                        <img src="images/futuristic-pfp.jpeg" alt="Profile">
+                        <div class="avatar-glow"></div>
+                    </div>
+                    <h2 class="profile-name">USERNAME</h2>
+                    <p class="profile-status">bio goes here</p>
+                </div>
+                
+                <div class="profile-stats">
+                    <div class="stat">
+                        <span class="stat-value">1,337</span>
+                        <span class="stat-label">Friends</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">460</span>
+                        <span class="stat-label">Posts</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">9,001</span>
+                        <span class="stat-label">Likes</span>
+                    </div>
+                </div>
+
+                <div class="profile-info">
+                    <div class="info-item">
+                        <span class="info-label">Location:</span>
+                        <span class="info-value">New York, NY</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">JOINED:</span>
+                        <span class="info-value">2004</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">MOOD:</span>
+                        <span class="info-value">tired</span>
+                    </div>
+                </div>
+
+                <button class="edit-profile-btn">Edit Profile</button>
+            </div>
+
+            <!-- Top Friends -->
+            <div class="top-friends">
+                <h3 class="section-title">Top 8 Friends</h3>
+                <div class="friends-grid">
+                    <div class="friend-item">
+                        <img src="images/futuristic-pfp.jpeg" alt="Friend">
+                        <span>FRIEND 1</span>
+                    </div>
+                    <div class="friend-item">
+                        <img src="images/futuristic-pfp.jpeg" alt="Friend">
+                        <span>FRIEND 2</span>
+                    </div>
+                    <div class="friend-item">
+                        <img src="images/futuristic-pfp.jpeg" alt="Friend">
+                        <span>FRIEND 3</span>
+                    </div>
+                    <div class="friend-item">
+                        <img src="images/futuristic-pfp.jpeg" alt="Friend">
+                        <span>FRIEND 4</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Feed -->
+        <main class="feed">
+            <!-- Post Creation -->
+            <div class="create-post">
+                <div class="create-post-header">
+                    <span class="blink-text">▶</span> WHAT IS ON YOUR MIND?
+                </div>
+                <textarea class="post-input" placeholder="share your thoughts with the cyberspace..."></textarea>
+                <div class="create-post-actions">
+                    <button class="action-btn">📷 PHOTOS</button>
+                    <button class="action-btn">🎵 MUSIC</button>
+                    <button class="action-btn">😎 MOOD</button>
+                    <button class="post-btn">POST</button>
+                </div>
+            </div>
+
+            <!-- Posts -->
+            <article class="post">
+                <div class="post-header">
+                    <img src="images/futuristic-pfp.jpeg" alt="User" class="post-avatar">
+                    <div class="post-user-info">
+                        <h3 class="post-username">FRIEND 1</h3>
+                        <span class="post-time">2 hours ago • New York</span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <p>CAPTION</p>
+                    <div class="post-image">
+                        <img src="images/futuristic-runway.jpeg" alt="Post image">
+                    </div>
+                </div>
+                <div class="post-actions">
+                    <button class="action-btn-post">👍 LIKE (42)</button>
+                    <button class="action-btn-post">💬 COMMENT (8)</button>
+                    <button class="action-btn-post">🔄 SHARE</button>
+                </div>
+                <div class="post-comments">
+                    <div class="comment">
+                        <img src="images/futuristic-pfp.jpeg" alt="User">
+                        <div class="comment-content">
+                            <span class="comment-user">FRIEND 2</span>
+                            <p>CAPTION</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="post">
+                <div class="post-header">
+                    <img src="images/futuristic-pfp.jpeg" alt="User" class="post-avatar">
+                    <div class="post-user-info">
+                        <h3 class="post-username">FRIEND 3</h3>
+                        <span class="post-time">5 hours ago • New York</span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <p>CAPTION</p>
+                </div>
+                <div class="post-actions">
+                    <button class="action-btn-post">👍 LIKE (128)</button>
+                    <button class="action-btn-post">💬 COMMENT (15)</button>
+                    <button class="action-btn-post">🔄 SHARE</button>
+                </div>
+            </article>
+
+            <article class="post">
+                <div class="post-header">
+                    <img src="images/futuristic-pfp.jpeg" alt="User" class="post-avatar">
+                    <div class="post-user-info">
+                        <h3 class="post-username">FRIEND 4</h3>
+                        <span class="post-time">1 day ago • New York</span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <p>CAPTION</p>
+                    <div class="post-image">
+                        <img src="images/cigarette-smoking.png" alt="Post image">
+                    </div>
+                </div>
+                <div class="post-actions">
+                    <button class="action-btn-post">👍 LIKE (256)</button>
+                    <button class="action-btn-post">💬 COMMENT (32)</button>
+                    <button class="action-btn-post">🔄 SHARE</button>
+                </div>
+            </article>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <!-- Online Friends -->
+            <div class="widget">
+                <h3 class="widget-title">⚡ Online Now</h3>
+                <div class="online-friends">
+                    <div class="online-friend">
+                        <img src="images/futuristic-pfp.jpeg" alt="Friend">
+                        <div class="friend-info">
+                            <span class="friend-name">FRIEND 1</span>
+                            <span class="friend-status">● Online</span>
+                        </div>
+                    </div>
+                    <div class="online-friend">
+                        <img src="images/futuristic-pfp.jpeg" alt="Friend">
+                        <div class="friend-info">
+                            <span class="friend-name">FRIEND 2</span>
+                            <span class="friend-status">● Online</span>
+                        </div>
+                    </div>
+                    <div class="online-friend">
+                        <img src="images/futuristic-pfp.jpeg" alt="Friend">
+                        <div class="friend-info">
+                            <span class="friend-name">FRIEND 3</span>
+                            <span class="friend-status">● Online</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trending -->
+            <div class="widget">
+                <h3 class="widget-title">Trending</h3>
+                <div class="trending-list">
+                    <div class="trending-item">#</div>
+                    <div class="trending-item">#</div>
+                    <div class="trending-item">#</div>
+                    <div class="trending-item">#</div>
+                    <div class="trending-item">#</div>
+                </div>
+            </div>
+
+            <!-- Ad Space (retro style) -->
+            <div class="widget ad-widget">
+                <div class="retro-ad">
+                    <div class="ad-blink">★ SPONSORED ★</div>
+                    <p>AD TEXT</p>
+                    <p class="ad-subtext">ad text two</p>
+                    <button class="ad-btn">CLICK HERE!</button>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
